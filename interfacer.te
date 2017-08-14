@@ -57,7 +57,19 @@ allow interfacer media_rw_data_file:file rw_file_perms;
 # Services
 allow interfacer activity_service:service_manager find;
 allow interfacer connectivity_service:service_manager find;
+<<<<<<< HEAD
+=======
+allow interfacer content_service:service_manager find;
+>>>>>>> oms/cm-14.1
 allow interfacer display_service:service_manager find;
 allow interfacer mount_service:service_manager find;
 allow interfacer network_management_service:service_manager find;
 allow interfacer overlay_service:service_manager find;
+<<<<<<< HEAD
+=======
+
+# Allow file and type transition for contexts
+type_transition interfacer system_data_file:file theme_data_file "theme";
+type_transition interfacer system_data_file:dir theme_data_file;
+file_type_auto_trans(interfacer, system_data_file, theme_data_file);
+>>>>>>> oms/cm-14.1
